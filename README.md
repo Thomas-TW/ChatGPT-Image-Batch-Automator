@@ -2,7 +2,7 @@
 
 Extension Chrome permettant d'envoyer automatiquement plusieurs prompts à ChatGPT, d'attendre la génération des images, puis de les télécharger avec le nom de leur clé JSON.
 
-## Fonctionnalites
+## Fonctionnalités
 
 - Envoi automatique d'une liste de prompts JSON.
 - Attente de la génération complète de chaque image.
@@ -61,7 +61,7 @@ Pour ignorer une scene, utilisez la valeur `"text"` :
 
 L'extension génère `08.png`, ignore complètement `09`, puis génère `10.png`. Les variantes `" text "` et `"TEXT"` sont également ignorées.
 
-## Prefixe global
+## Préfixe global
 
 Le champ **Préfixe global** permet d'ajouter automatiquement des instructions communes au début de chaque prompt : style graphique, personnages, couleurs, typographie et composition.
 
@@ -109,7 +109,7 @@ Le **Journal d'exécution** affiche les principales étapes : démarrage, vérif
 
 Les boutons **Copier** et **Effacer** permettent de gérer le journal.
 
-## Arret et limites
+## Arrêt et limites
 
 Cliquez sur **Stop** pour demander l'arrêt de la file.
 
