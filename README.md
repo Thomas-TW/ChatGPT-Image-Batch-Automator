@@ -19,7 +19,7 @@ Extension Chrome permettant d'envoyer automatiquement plusieurs prompts à ChatG
 ## Installation
 
 1. Téléchargez le dépôt avec le bouton **Code > Download ZIP**.
-2. Extrayez le fichier ZIP.
+2. Décompressez l'archive ZIP.
 3. Ouvrez Chrome et accédez à `chrome://extensions`.
 4. Activez le **Mode développeur**.
 5. Cliquez sur **Charger l'extension non empaquetée**.
