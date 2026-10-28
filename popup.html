@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT Images</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>ChatGPT Images</h1>
+        <span id="stateBadge">Pret</span>
+      </header>
+
+      <label for="promptsJson">Prompts JSON</label>
+      <textarea id="promptsJson" spellcheck="false" placeholder='{"1":"prompt image 1","2":"prompt image 2"}'></textarea>
+
+      <label class="checkbox-field" for="useGlobalPrefix">
+        <input id="useGlobalPrefix" type="checkbox" checked>
+        <span>Ajouter le préfixe global à chaque prompt</span>
+      </label>
+
+      <div class="field">
+        <label for="globalPrefix">Préfixe global</label>
+        <textarea id="globalPrefix" class="global-prefix" spellcheck="false"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="downloadPath">Dossier d'enregistrement</label>
+        <input id="downloadPath" type="text" autocomplete="off">
+      </div>
+
+      <fieldset class="interval-field">
+        <legend>Intervalle entre les prompts</legend>
+        <label for="minDelay">Min</label>
+        <input id="minDelay" type="number" min="0" step="1">
+        <label for="maxDelay">Max</label>
+        <input id="maxDelay" type="number" min="0" step="1">
+      </fieldset>
+
+      <label class="checkbox-field" for="reliableMode">
+        <input id="reliableMode" type="checkbox">
+        <span>Mode fiable : garder l'onglet ChatGPT actif dans Chrome</span>
+      </label>
+
+      <div class="actions">
+        <button id="startButton" type="button">Start</button>
+        <button id="stopButton" type="button">Stop</button>
+      </div>
+
+      <div class="status">
+        <progress id="progress" value="0" max="1"></progress>
+        <p id="statusText">Pret.</p>
+      </div>
+
+      <section class="logs" aria-labelledby="logsTitle">
+        <div class="logs-header">
+          <h2 id="logsTitle">Journal d'execution</h2>
+          <div class="logs-actions">
+            <button id="copyLogsButton" class="secondary-small" type="button">Copier</button>
+            <button id="clearLogsButton" class="secondary-small" type="button">Effacer</button>
+          </div>
+        </div>
+        <pre id="logsOutput" aria-live="polite">Aucun evenement.</pre>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
